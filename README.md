@@ -27,6 +27,4 @@ We compiled a database of past events and their date+time. Then we built a backe
 - Make events editable so people can use it as a deadline counter
 
 ## Demo Link
-
-
-## References
+[The Timeless Clock Demo](https://youtu.be/C5vK3TcPIcA)
