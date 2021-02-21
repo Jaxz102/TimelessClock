@@ -1,0 +1,96 @@
+<!--The time is ___"The countdown"____since/untill____"An Event"____-->
+
+<!--Years:  -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock Generator</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- <link href="../static/style.css" style="max-width:25%" rel="stylesheet"> -->
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='front.js') }}"></script> -->
+        <style>
+            body{
+                background-image: url("../static/img/{{  picture }}");
+                background-size: cover;
+            }
+
+            .tshawdow{
+                text-shadow: 1px 1px #000000;
+            }
+            .bgContent{
+                background-color: black; 
+                width: 65%; 
+                margin: auto;
+                padding: 10px;
+            }
+            .bgContent var{  /*PLAY WITH FONTS HERE*/
+                font-size: 3rem;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+            }
+        </style>
+    </head>
+    <body class="text-white" onload="startTime()">
+        <img src="../static/logo.png" style="width: 20%; margin-left: 40%; margin-top: 30px;">
+        <div class="bgContent">
+            <h2 class="text-white text-center tshawdow">The time is...</h2>
+            <h2 class="text-white text-center tshawdow" >
+                <var id="year">{{  year  }}</var> Years  
+                <var id="day">  {{  day  }}</var> Days  
+                <var id="hour">  {{  hour  }}</var> Hours  
+                <var id="minute">  {{  minute  }}</var> Minutes  
+                <var id="second">  {{  second  }}</var> Seconds  
+            </h2>
+            <h2 class="text-white text-center tshawdow mt-4">{{  event  }}</h2>
+            <form class="input-group mb-3 mt-3 w-50 m-auto" action="/" method="post" name="name">
+                <button type="submit" class="generate m-3 btn btn-lg btn-danger text-center mx-auto w-100" onclick="doSomething()">Generate</button>
+            </form>
+        </div>
+        <script>
+            var second = document.getElementById("second");
+            var minute = document.getElementById("minute");
+            var year = document.getElementById("year");
+            var hour = document.getElementById("hour");
+            var day = document.getElementById("day");
+
+            var sec = parseInt(second.innerHTML);
+            var min = parseInt(minute.innerHTML);
+            var hou = parseInt(hour.innerHTML);
+            var da = parseInt(day.innerHTML);
+            var yea = parseInt(year.innerHTML);
+
+           
+            function startTime() {
+                
+                console.log(sec);
+                second.innerHTML = sec;
+                sec = sec + 1;
+                if (sec == 60){
+                    sec = 0;
+                    min = min + 1;
+                    if(min == 60){
+                        min = 0;
+                        hou = hou + 1;
+                        if(hou == 24){
+                            hou = 0;
+                            da = da + 1;
+                            if(da == 365){
+                                da = 0;
+                                yea = yea + 1;
+                                year.innerHTML = year;
+                            }
+                            day.innerHTML = da;
+                        }
+                        hour.innerHTML = hou;
+                    }
+                    minute.innerHTML = min;
+                }
+
+                var t = setTimeout(startTime, 1000);
+            }
+            
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
