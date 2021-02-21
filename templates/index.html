@@ -31,14 +31,19 @@
         </style>
     </head>
     <body class="text-white" onload="startTime()">
+        <br>
         <img src="../static/logo.png" style="width: 20%; margin-left: 40%; margin-top: 30px;">
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="bgContent">
             <h2 class="text-white text-center tshawdow">The time is...</h2>
             <h2 class="text-white text-center tshawdow" >
-                <var id="year">{{  year  }}</var> Years  
-                <var id="day">  {{  day  }}</var> Days  
-                <var id="hour">  {{  hour  }}</var> Hours  
-                <var id="minute">  {{  minute  }}</var> Minutes  
+                <var id="year">{{  year  }}</var> Years,  
+                <var id="day">  {{  day  }}</var> Days,  
+                <var id="hour">  {{  hour  }}</var> Hours,  
+                <var id="minute">  {{  minute  }}</var> Minutes, and 
                 <var id="second">  {{  second  }}</var> Seconds  
             </h2>
             <h2 class="text-white text-center tshawdow mt-4">{{  event  }}</h2>
@@ -85,8 +90,7 @@
                     }
                     minute.innerHTML = min;
                 }
-
-                var t = setTimeout(startTime, 1000);
+            var t = setTimeout(startTime, 1000);
             }
             
         </script>
