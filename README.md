@@ -28,8 +28,3 @@ We compiled a database of past events and their date+time. Then we built a backe
 
 ## Demo Link
 [The Timeless Clock Demo](https://youtu.be/C5vK3TcPIcA)
-
-## Built by:
-- Ryan Lam
-- Jax Wang
-- Ming Zhang
