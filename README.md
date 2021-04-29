@@ -1,4 +1,5 @@
 # Timeless Clock
+
 ![](https://github.com/ryan-lam/TimelessClock/blob/main/logo.jpg)
 ## Inspiration
 Our inspiration came from the fact that we wanted to create something that was simultaneously useful and not useful at the same time. We also wanted to compete in the "most useless hack" prize category and looked into how we can over-complicate a simple tool to make it inefficient.
